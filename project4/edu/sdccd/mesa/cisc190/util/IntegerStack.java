@@ -1,28 +1,74 @@
-package edu.sdccd.mesa.cisc190.util; 
-
-public class IntegerStack
-{
-    // member variables go here
-
-    public IntegerStack()
+    package edu.sdccd.mesa.cisc190.util; 
+    
+    public class IntegerStack
     {
+        
+        // member variables go here
+        private int[] stack;
+        private int index;
+    
+        public IntegerStack() // Construtor, same name as the class. Where you declare varibles.
+        {
+            stack = new int[10];
+            //this(10);
+            index = 0;
+        }
+    
+        public IntegerStack(int initialCapacity) // Args constructor 
+        {
+            stack = new int[initialCapacity];
+            index = 0;
+        }
+    
+        /**
+         * Look at the top value in the stack, without removing it.
+         * @return the value at the top 
+         */
+        public int peek()
+        {
+            return intArray[arrayPosition-1];
+        }
+        
+        /**
+         * Pop a value into the stack
+         * @return the value removed 
+         */
+        public int pop()
+        {
+            if (arrayPosition <= 0) {
+            arrayPosition -= 1;
+            return intArray[arrayPosition];
+        }
+        else
+        {
+            return 0;
+        }
     }
-
-    public IntegerStack(int capacity)
+    
+    /**
+     * Push a value into the stack
+     * @param value the value to push 
+     */
+    public void push(int value)
     {
-    }
-
-    public int peek()
-    {
-        return 0;
-    }
-
-    public int pop()
-    {
-        return 0;
-    }
-
-    public void push()
-    {
-    }
+       if ( index < stack.length )
+       {
+           stack[index] = value;
+           index += 1;
+       }
+       else
+       {
+           // Nothing happens
+       }
 }
+
+
+
+
+
+
+
+
+
+
+

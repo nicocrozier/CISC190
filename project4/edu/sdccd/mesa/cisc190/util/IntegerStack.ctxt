@@ -2,12 +2,12 @@
 comment0.target=IntegerStack
 comment1.params=
 comment1.target=IntegerStack()
-comment2.params=capacity
+comment2.params=initialCapacity
 comment2.target=IntegerStack(int)
 comment3.params=
 comment3.target=int\ peek()
 comment4.params=
 comment4.target=int\ pop()
-comment5.params=
-comment5.target=void\ push()
+comment5.params=value
+comment5.target=void\ push(int)
 numComments=6
