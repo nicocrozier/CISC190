@@ -51,16 +51,21 @@
      */
     public void push(int value)
     {
-       if ( index < stack.length )
+       if ( arrayPosition < intArray.length )
        {
-           stack[index] = value;
-           index += 1;
+           intArray[arrayPosition] = value;
+           arrayPosition += 1;
        }
        else
        {
            // Nothing happens
        }
-}
+       
+       public String.toString()
+       {
+           return "{arrayPosition : " + arrayPosition + ", intArray : " + intArray.toString() + "}";
+       }
+    }
 
 
 
