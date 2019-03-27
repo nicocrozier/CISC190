@@ -1,6 +1,7 @@
 
 public class stack{
     
+    
     String[] stack = new String[10];
     int stackIndex = 0;
     
@@ -9,6 +10,7 @@ public class stack{
         if (stackIndex >= 0 && stackIndex < stack.length){
             stack[stackIndex] = param;
             stackIndex += 1;
+            
         } else {
             System.out.println("Out of bounds");
         }
