@@ -7,7 +7,7 @@ public class Stack{
     public void push(int data){
 
         // Checks if inbounds; Q: when use .length gets OutOfBoundsException instead, why?
-        if(stackIndex == 5 /*stack.length + 1*/){
+        if(stackIndex == stack.length){
             System.out.println("Stack is full");
         } else {
             stack[stackIndex] = data;
