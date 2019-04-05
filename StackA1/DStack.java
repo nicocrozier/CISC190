@@ -1,19 +1,39 @@
-public class Stack{
+
+public class DStack {
+
+
     //Array to hold elements
-    int stack[] = new int[5];
+    int capacity = 5;
+    int stack[] = new int[capacity];
     int stackIndex = 0;
+
+
 
     //Push Method; pushes then increments by 1
     public void push(int data){
 
-        // Checks if inbounds;
-        if(stackIndex == stack.length){
-            System.out.println("Stack is full");
-        } else {
-            stack[stackIndex] = data;
-            stackIndex++;
-        }
+        if(size() == capacity)
+            expand();
+
+        stack[stackIndex] = data;
+        stackIndex++;
     }
+
+    //Makes a new stack 2x the size.
+    private void expand(){
+        int length = size();
+        int newStack[] = new int[capacity * 2];
+        System.arraycopy(stack, 0, newStack, length);
+        stack = newStack;
+        capacity *= 2;
+    }
+
+
+
+
+
+
+
 
     //Pop Method; Removes and fetches the new recent value
     public int pop(){
@@ -48,4 +68,5 @@ public class Stack{
             System.out.println(n + " ");
         }
     }
+
 }
