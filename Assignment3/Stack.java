@@ -38,6 +38,24 @@ public class Stack{
         }
     }
     
+    //Pop Method; Removes and fetches the new recent value
+    public int pop(){
+        //Declare data
+        int data;
+        stackIndex--;
+        data = stack[stackIndex];
+        stack[stackIndex] = 0;
+        return data;
+    }
+
+    //Peek Method; fetching last value
+    public int peek(){
+        //Declare data
+        int data;
+        data = stack[stackIndex-1];
+        return data;
+    }
+    
 }
 
 
