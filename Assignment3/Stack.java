@@ -1,3 +1,5 @@
+// There still should be an exception when there is nothing on the stack when peek or pop is called.
+
 public class Stack{
     //Array to hold elements
     int capacity = 2;
