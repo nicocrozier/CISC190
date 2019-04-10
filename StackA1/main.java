@@ -37,7 +37,7 @@ public class main {
         //Check if IsEmpty
         //System.out.println("Empty=" + nums.isEmpty());
 
-        //nums.show();
+        nums.show();
     }
 
 }
