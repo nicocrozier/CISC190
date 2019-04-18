@@ -11,12 +11,12 @@ public class Stack{
         if( stackIndex == capacity ){
             expand();
             
-        
         };
-            stack[stackIndex] = dataPushed;
-            stackIndex++;
+        stack[stackIndex] = dataPushed;
+        stackIndex++;
         
     }
+    
     //Makes a new stack 2x the size of previous Stack
     public void expand(){
         int length = stackIndex;
@@ -40,20 +40,30 @@ public class Stack{
     
     //Pop Method; Removes and fetches the new recent value
     public int pop(){
-        //Declare data
-        int data;
-        stackIndex--;
-        data = stack[stackIndex];
-        stack[stackIndex] = 0;
-        return data;
+        if(stackIndex <= 0){
+            throw new ArrayIndexOutOfBoundsException("Out of bounds!");
+            
+        } else {
+            int data;
+            stackIndex--;
+            data = stack[stackIndex];
+            stack[stackIndex] = 0;
+            return data;
+        }
     }
-
+    
     //Peek Method; fetching last value
     public int peek(){
-        //Declare data
-        int data;
-        data = stack[stackIndex-1];
-        return data;
+        if(stackIndex <= 0){
+            throw new ArrayIndexOutOfBoundsException("Nothing on Stack");
+        } else {
+            //Declare data
+            int data;
+            data = stack[stackIndex-1];
+            return data;
+            
+        }
+       
     }
     
 }

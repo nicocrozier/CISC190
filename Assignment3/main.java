@@ -12,5 +12,10 @@ public class main {
         nums.show();
         
         nums.pop();
+        nums.pop();
+        nums.pop();
+        nums.pop(); 
+        
+        nums.peek();
     }
 }
